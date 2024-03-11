@@ -1,9 +1,10 @@
-import { LanguagesType } from '../data-dragon-manager';
+import { Either } from '../../../../shared/either';
+import { LanguagesType } from '../../../constants/language-type';
 import { InvalidLanguage } from '../errors/invalid-language';
-import { Challenger } from 'src/challenger.interface';
 
 export abstract class DataDragonRepository {
-  abstract getChallengesByLanguage: (
+  abstract dataDragonTailConnection: <T>(
     language: LanguagesType,
-  ) => Promise<InvalidLanguage | Challenger[]>;
+    route: string,
+  ) => Promise<Either<InvalidLanguage, T>>;
 }
