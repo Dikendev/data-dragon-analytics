@@ -1,6 +1,6 @@
 import { Controller, Get } from '@nestjs/common';
 import { AppService } from './app.service';
-import { Challenger } from './challenger.interface';
+import { Challenger } from './main/use-case/manage-data-dragon-files/interfaces/challenger.interface';
 
 @Controller()
 export class AppController {

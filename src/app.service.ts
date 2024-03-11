@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import * as fs from 'fs';
-import { Challenger } from './challenger.interface';
+import { Challenger } from './main/use-case/manage-data-dragon-files/interfaces/challenger.interface';
 
 @Injectable()
 export class AppService {
